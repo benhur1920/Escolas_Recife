@@ -23,7 +23,7 @@ def grafico_zona(df):
         )
         fig.update_layout(
             title={
-                'text': 'Unidades básicas de saúde por região',
+                'text': 'Unidades de ensino por região',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {
@@ -61,7 +61,7 @@ def grafico_bairro(df):
 
     fig1.update_layout(
         title={
-            'text': 'Unidades básicas de saúde por bairro',
+            'text': 'Unidades de ensino por bairro',
             'x': 0.5,
             'xanchor': 'center',
             'font': {
