@@ -34,7 +34,7 @@ def dataframe(df_filtrado):
     st.markdown("""
         <style>
         .stDataFrame, .stDataEditor {
-            background-color: #f0f8ff !important;
+            background-color: #444444 !important;
         }
         </style>
     """, unsafe_allow_html=True)

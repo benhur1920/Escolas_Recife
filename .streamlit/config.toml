@@ -16,7 +16,7 @@ textColor = "#444444"
 font = "sans serif" - Fonte padrão usada pelo Streamlit (antes de aplicar seu CSS)
 
 [browser]
-toolbarMode = "viewer"
+toolbarMode = "minimal"
 
 
 # Exemplos visuais rápidos:
