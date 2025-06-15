@@ -3,8 +3,8 @@
 [theme]
 primaryColor = "#1f77b4"
 backgroundColor = "#fffdff"
-secondaryBackgroundColor = "#ffffff"
-textColor = "#B7B7B7"
+secondaryBackgroundColor = "#DDDDDD"
+textColor = "#444444"
 font = "sans serif"
 
 
