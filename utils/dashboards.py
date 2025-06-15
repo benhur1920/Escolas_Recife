@@ -29,7 +29,7 @@ def graficos(df_filtrado):
     aba1, aba2, aba3 = st.tabs(['🏫 Unidades', '📈 Dashboards', '🗺️ Mapas'])
 
     with aba1:
-        col1, col2, col3 = st.columns([1, 1, 3], vertical_alignment='center')
+        col1, col2, col3 = st.columns([2, 2, 3], vertical_alignment='center', gap='small')
 
         with col1:
             st.metric("🏫 Unidades de ensino", value=(totalUnidades),  border=True)
@@ -54,11 +54,11 @@ def graficos(df_filtrado):
         col1, col2, col3, col4 = st.columns(4)
 
         with col1:
-            st.metric("🏫  Escolas municipais", value=totalEscola, border=True)
+            st.metric("🏫  Escolas ", value=totalEscola, border=True)
         with col2:
-            st.metric("👶 Creches municipais", value=totalCreche, border=True)
+            st.metric("👶 Creches ", value=totalCreche, border=True)
         with col3:
-            st.metric("🏫👶 Creches escolas municipais", value=totalCrecheEscola, border=True)
+            st.metric("🏫👶 Creches escolas ", value=totalCrecheEscola, border=True)
         with col4:
             st.metric("🏠📚 Cmei", value=totalCmei, border=True)
 

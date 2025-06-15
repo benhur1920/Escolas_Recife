@@ -27,7 +27,7 @@ def grafico_zona(df):
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {
-                    'size': 22,
+                    'size': 18,
                     'color': texto
                 }
             },
@@ -65,7 +65,7 @@ def grafico_bairro(df):
             'x': 0.5,
             'xanchor': 'center',
             'font': {
-                'size': 22,
+                'size': 18,
                 'color': texto
             }
         },
@@ -111,7 +111,7 @@ def grafico_tipo(df):
         'x': 0.5,
         'xanchor': 'center',
         'font': {
-            'size': 22,
+            'size': 18,
             'color': texto
         }
     },
@@ -166,7 +166,7 @@ def grafico_mapa(df):
 
     legend=dict(
         title_text='Tipo de Escola',
-        title_font=dict(size=20, color=texto),
+        title_font=dict(size=18, color=texto),
         font=dict(size=12, color=texto),
         orientation='h',           # ← Horizontal
         x=0.5,                     # ← Centro horizontal da tela
@@ -207,16 +207,16 @@ def grafico_climatizacao(df):
             df_climatizacao,
             x='Escola_climatizada',
             y='TOTAL',
-            labels={'Escola_climatizada': 'Escola climatizada'},
+            labels={'Escola_climatizada': 'Conforto térmico'},
             
         )
         fig5.update_layout(
             title={
-                'text': 'Escolas climatizadas',
+                'text': 'Escolas Climatizadas',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {
-                    'size': 22,
+                    'size': 18,
                     'color': texto
                 }
             },  # <--- essa vírgula aqui é importante para separar os parâmetros
@@ -263,11 +263,11 @@ def grafico_sala(df):
         )
         fig6.update_layout(
             title={
-                'text': 'Escolas com salas de recursos',
+                'text': 'Escolas com recursos',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {
-                    'size': 22,
+                    'size': 18,
                     'color': texto
                 }
             },  # <--- essa vírgula aqui é importante para separar os parâmetros
@@ -313,11 +313,11 @@ def grafico_bibliotecas(df):
         )
         fig7.update_layout(
             title={
-                'text': 'Escolas com Bibliotecas',
+                'text': 'Escolas com bibliotecas',
                 'x': 0.5,
                 'xanchor': 'center',
                 'font': {
-                    'size': 22,
+                    'size': 18,
                     'color': texto
                 }
             },

@@ -79,11 +79,7 @@ def criacao_navegacao_e_filtros():
         # Título dos filtros
         st.markdown("<h1>Filtros</h1>", unsafe_allow_html=True)
 
-        # Filtro de Opção
-        tipo = sorted(df_filtrado['Tipo'].dropna().unique())
-        filtro_tipo = st.multiselect('Selecione o tipo de escola', tipo, placeholder="Selecione uma opção")
-        if filtro_tipo:
-            df_filtrado = df_filtrado[df_filtrado['Tipo'].isin(filtro_tipo)]
+        
 
         # Filtro de Zona
         zonas_disponiveis = sorted(df_filtrado['Região'].dropna().unique())
@@ -96,6 +92,12 @@ def criacao_navegacao_e_filtros():
         filtro_bairro = st.multiselect('Selecione o bairro', bairros_disponiveis, placeholder="Selecione uma opção")
         if filtro_bairro:
             df_filtrado = df_filtrado[df_filtrado['Bairro'].isin(filtro_bairro)]
+
+        # Filtro de Tipo
+        tipo = sorted(df_filtrado['Tipo'].dropna().unique())
+        filtro_tipo = st.multiselect('Selecione o tipo de escola', tipo, placeholder="Selecione uma opção")
+        if filtro_tipo:
+            df_filtrado = df_filtrado[df_filtrado['Tipo'].isin(filtro_tipo)]
 
         # Filtro de Climatização
         Climatizacao_disponiveis = sorted(df_filtrado['Escola_climatizada'].dropna().unique())
