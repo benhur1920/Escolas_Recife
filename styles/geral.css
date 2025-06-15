@@ -130,7 +130,7 @@ div[data-testid="stMetric"] {
 
 /* Personalizar fundo do data editor */
 [data-testid="stDataEditor"] {
-    background-color: #f0f8ff !important;
+    background-color: #ffffff !important;
     border-radius: 10px;
     padding: 10px;
 }

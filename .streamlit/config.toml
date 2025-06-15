@@ -1,12 +1,22 @@
 
 
 [theme]
-primaryColor = "#1f77b4"
-backgroundColor = "#f0f8ff"
+# Primary accent color for interactive elements
+primaryColor = "#d33682"
+
+# Background color for the main content area
+backgroundColor = "#002b36"
+
+# Background color used for the sidebar and most interactive widgets
 secondaryBackgroundColor = "#fdfdfd"
+
+# Color used for almost all text
 textColor = "#444444"
+
 font = "sans serif"
 
+[browser]
+toolbarMode = "viewer"
 
 
 # Exemplos visuais rápidos:
