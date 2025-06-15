@@ -30,6 +30,14 @@ def dataframe(df_filtrado):
     # Aplica seleção de colunas
     filtro_dados = filtro_dados[colunas]
 
+    # CSS custom para o data editor
+    st.markdown("""
+        <style>
+        .stDataFrame, .stDataEditor {
+            background-color: #f0f8ff !important;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
     # Mostra os dados
     st.data_editor(filtro_dados, use_container_width=True)
