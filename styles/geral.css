@@ -136,3 +136,14 @@ div[data-testid="stMetric"] {
     padding: 10px;
 }
 
+/* Corrige o tooltip (dica de célula) do Data Editor */
+div[data-testid="stTooltip"] {
+    background-color: #333333 !important; /* Fundo escuro */
+    color: #ffffff !important;            /* Texto claro */
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    max-width: 300px;                     /* Limita o tamanho máximo do tooltip */
+    word-wrap: break-word;                /* Quebra o texto se for muito longo */
+    z-index: 9999;
+}
