@@ -25,7 +25,7 @@ def grafico_zona(df):
             title={
                 'text': 'Unidades de ensino por região',
                 'x': 0.5,
-                'xanchor': 'center',
+                'xanchor': 'right',
                 'font': {
                     'size': 18,
                     'color': texto
@@ -63,7 +63,7 @@ def grafico_bairro(df):
         title={
             'text': 'Unidades de ensino por bairro',
             'x': 0.5,
-            'xanchor': 'center',
+            'xanchor': 'right',
             'font': {
                 'size': 18,
                 'color': texto
@@ -109,7 +109,7 @@ def grafico_tipo(df):
     title={
         'text': 'Tipos de unidades de ensino',
         'x': 0.5,
-        'xanchor': 'center',
+        'xanchor': 'right',
         'font': {
             'size': 18,
             'color': texto
@@ -171,7 +171,7 @@ def grafico_mapa(df):
         orientation='h',           # ← Horizontal
         x=0.5,                     # ← Centro horizontal da tela
         y=1.05,                    # ← Acima da área do gráfico (ajuste fino se quiser)
-        xanchor='center',
+        xanchor='right',
         yanchor='bottom',
         bgcolor=background,
         #bordercolor='black',
@@ -207,19 +207,11 @@ def grafico_climatizacao(df):
             df_climatizacao,
             x='Escola_climatizada',
             y='TOTAL',
-            labels={'Escola_climatizada': 'Conforto térmico'},
+            labels={'Escola_climatizada': 'Escolas climatizadas'},
             
         )
         fig5.update_layout(
-            title={
-                'text': 'Escolas Climatizadas',
-                'x': 0.5,
-                'xanchor': 'center',
-                'font': {
-                    'size': 18,
-                    'color': texto
-                }
-            },  # <--- essa vírgula aqui é importante para separar os parâmetros
+            # <--- essa vírgula aqui é importante para separar os parâmetros
             plot_bgcolor=background,
             paper_bgcolor=background,
             font=dict(color=texto),
@@ -258,19 +250,11 @@ def grafico_sala(df):
             df_sala,
             x='Sala_recurso',
             y='TOTAL',
-            labels={'Sala_recurso': 'Sala recurso'},
+            labels={'Sala_recurso': 'Escolas com Sala de recursos'},
             
         )
         fig6.update_layout(
-            title={
-                'text': 'Escolas com recursos',
-                'x': 0.5,
-                'xanchor': 'center',
-                'font': {
-                    'size': 18,
-                    'color': texto
-                }
-            },  # <--- essa vírgula aqui é importante para separar os parâmetros
+            
             plot_bgcolor=background,
             paper_bgcolor=background,
             font=dict(color=texto),
@@ -310,17 +294,10 @@ def grafico_bibliotecas(df):
             df_bibliotecas,
             x='Biblioteca',
             y='TOTAL',
+            labels={'Biblioteca': 'Escolas com bibliotecas'},
         )
         fig7.update_layout(
-            title={
-                'text': 'Escolas com bibliotecas',
-                'x': 0.5,
-                'xanchor': 'center',
-                'font': {
-                    'size': 18,
-                    'color': texto
-                }
-            },
+            
             plot_bgcolor=background,
             paper_bgcolor=background,
             font=dict(color=texto),
