@@ -12,12 +12,15 @@ secondaryBackgroundColor = "#fdfdfd"
 
 # Color used for almost all text - Cor padrão dos textos
 textColor = "#444444"
-toolbarMode= "#444444"
-font = "sans serif" - Fonte padrão usada pelo Streamlit (antes de aplicar seu CSS)
+
+# Modo da toolbar da sidebar (exemplo: minimal, expanded)
+toolbarMode = "minimal"
+
+# Fonte padrão usada pelo Streamlit (antes de aplicar seu CSS)
+font = "sans serif"
 
 [browser]
 toolbarMode = "minimal"
-
 
 # Exemplos visuais rápidos:
 # Componente	                Depende de
