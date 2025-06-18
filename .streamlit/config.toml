@@ -1,30 +1,13 @@
 
-
 [theme]
-# Primary accent color for interactive elements - Cor principal dos botões interativos (exemplo: botões de submit, etc)
 primaryColor = "#d33682"
-
-# Background color for the main content area - Fundo principal do app
 backgroundColor = "#FBFBFB"
-
-# Background color used for the sidebar and most interactive widgets - Fundo da sidebar e widgets
 secondaryBackgroundColor = "#fdfdfd"
-
-# Color used for almost all text - Cor padrão dos textos
 textColor = "#444444"
-
-# Modo da toolbar da sidebar (exemplo: minimal, expanded)
-toolbarMode = "minimal"
-
-# Fonte padrão usada pelo Streamlit (antes de aplicar seu CSS)
 font = "sans serif"
 
 [browser]
 toolbarMode = "minimal"
 
-# Exemplos visuais rápidos:
-# Componente	                Depende de
-# Botão (st.button())	        primaryColor
-# Sidebar (st.sidebar.*)	    secondaryBackgroundColor
-# Fundo da página	            backgroundColor
-# Texto padrão	                textColor
+[server]
+fileWatcherType = "none"
