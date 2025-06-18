@@ -58,9 +58,9 @@ def graficos(df_filtrado):
         with col2:
             st.metric("👶 Creches ", value=totalCreche, border=True)
         with col3:
-            st.metric("🏫👶 Creches escolas ", value=totalCrecheEscola, border=True)
+            st.metric("👶 Creches escolas ", value=totalCrecheEscola, border=True)
         with col4:
-            st.metric("🏠📚 Cmei", value=totalCmei, border=True)
+            st.metric("📚 Cmei", value=totalCmei, border=True)
 
         
         
