@@ -55,6 +55,19 @@ def criacao_navegacao_e_filtros():
     # Sidebar: Menu + Filtros
     with st.sidebar:
         st.markdown('<div class="custom-menu-title"><p>📡 Conheça</p></div>', unsafe_allow_html=True)
+        # Força o sidebar a ficar aberto sempre (em ambientes onde ele vem recolhido)
+        st.markdown("""
+            <style>
+            section[data-testid="stSidebar"] {
+                width: 300px !important;
+                max-width: 300px !important;
+            }
+            section[data-testid="stSidebar"] > div:first-child {
+                padding-top: 20px;
+            }
+            </style>
+            """, unsafe_allow_html=True)
+
 
         selected = option_menu(
             menu_title=None,  # Não usa o menu_title original
