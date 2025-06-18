@@ -6,8 +6,6 @@ secondaryBackgroundColor = "#fdfdfd"
 textColor = "#444444"
 font = "sans serif"
 
-[browser]
-toolbarMode = "minimal"
-
 [server]
 fileWatcherType = "none"
+
