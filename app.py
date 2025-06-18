@@ -10,6 +10,20 @@ st.set_page_config(
     layout="wide",
     page_title="EscolasRecife")
 
+st.markdown("""
+    <style>
+    [data-testid="stSidebar"] {
+        visibility: visible !important;
+        width: 300px !important;
+    }
+    [data-testid="stSidebar"] > div:first-child {
+        padding-top: 20px;
+    }
+    [data-testid="stSidebar"][aria-expanded="false"] {
+        transform: translateX(0%) !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # Configurações Estruturais
 ROOT_DIR = Path(__file__).resolve().parent
@@ -55,19 +69,7 @@ def criacao_navegacao_e_filtros():
     # Sidebar: Menu + Filtros
     with st.sidebar:
         st.markdown('<div class="custom-menu-title"><p>📡 Conheça</p></div>', unsafe_allow_html=True)
-        # Força o sidebar a ficar aberto sempre (em ambientes onde ele vem recolhido)
-        st.markdown("""
-            <style>
-            section[data-testid="stSidebar"] {
-                width: 300px !important;
-                max-width: 300px !important;
-            }
-            section[data-testid="stSidebar"] > div:first-child {
-                padding-top: 20px;
-            }
-            </style>
-            """, unsafe_allow_html=True)
-
+        
 
         selected = option_menu(
             menu_title=None,  # Não usa o menu_title original
