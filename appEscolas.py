@@ -89,7 +89,7 @@ def criacao_navegacao_e_filtros():
                     "hover-color": texto,
                 },
                 "nav-link-selected": {
-                    "background-color": "#ffffff",
+                    "background-color": "#bf078e",
                     "color": background,
                 },
             }
