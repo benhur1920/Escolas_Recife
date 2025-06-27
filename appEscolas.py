@@ -1,4 +1,11 @@
 import streamlit as st
+
+
+st.set_page_config(
+    layout="wide",
+    page_title="EscolasRecife")
+
+
 from pathlib import Path
 from streamlit_option_menu import option_menu
 from utils import dashboards, sobre, dataframe
@@ -6,9 +13,7 @@ from datetime import date
 from utils.totalizadores import hoje,df
 from utils.marcadores import texto,sidebar, background
 
-st.set_page_config(
-    layout="wide",
-    page_title="EscolasRecife")
+
 
 st.markdown("""
     <style>
