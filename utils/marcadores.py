@@ -6,5 +6,5 @@ texto = "#fffddf"
 textoSideBar = background
 
 def divisor():
-    return st.markdown("<hr style='border:1px solid #fffddf;'>", unsafe_allow_html=True)
+    return st.markdown("<hr style='border:1px solid #002b36;'>", unsafe_allow_html=True)
 
