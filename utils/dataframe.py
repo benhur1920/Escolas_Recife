@@ -50,7 +50,7 @@ def dataframe(df_filtrado):
     <style>
     .stDownloadButton button {
         color: texto !important;
-        background-color:  #586e75!important;
+        #background-color:  #586e75!important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -59,7 +59,7 @@ def dataframe(df_filtrado):
 
     csv = filtro_dados.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
     st.download_button(
-        label="📥 Baixar CSV",
+        label="⬇️ Baixar CSV",
         data=csv,
         file_name='unidades_ensino_recife.csv',
         mime='text/csv',
