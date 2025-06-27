@@ -2,8 +2,8 @@
 [theme]
 primaryColor = "#d33682"
 backgroundColor =  "#ffffff"
-secondaryBackgroundColor = "#8283b7"
-textColor = "#444444"
+secondaryBackgroundColor = "#7c3c7d" #Afeta o sidebar
+textColor = "#444444" # afeta todo texto
 font = "sans serif"
 
 [server]

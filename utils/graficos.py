@@ -173,7 +173,7 @@ def grafico_mapa(df):
         y=1.05,                    # ← Acima da área do gráfico (ajuste fino se quiser)
         xanchor='right',
         yanchor='bottom',
-        bgcolor=background,
+        #bgcolor=background,
         #bordercolor='black',
         borderwidth=1
     ),
@@ -182,7 +182,7 @@ def grafico_mapa(df):
     paper_bgcolor=background,
     margin=dict(t=150, b=20, l=10, r=10),  # ← Aumentei o top pra dar espaço
     modebar=dict(
-        bgcolor=background,
+        #bgcolor=background,
         color=texto,
         activecolor=texto
     )
