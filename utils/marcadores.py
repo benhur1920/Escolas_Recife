@@ -2,7 +2,7 @@ import streamlit as st
 
 background = "#002b36"
 sidebar = "#586e75"
-texto = "#fffddf"
+texto = "#444444"
 textoSideBar = background
 
 def divisor():
