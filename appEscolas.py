@@ -31,11 +31,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Configurações Estruturais
-ROOT_DIR = Path(__file__).resolve().parent
-CSS_FILE = ROOT_DIR / "styles" / "geral.css"
+# ROOT_DIR = Path(__file__).resolve().parent
+#CSS_FILE = ROOT_DIR / "styles" / "geral.css"
 
-with open(CSS_FILE, "r", encoding="utf-8") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+#with open(CSS_FILE, "r", encoding="utf-8") as f:
+#    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
 # Mostra a data mais recente, importar dos totalizadores.py
