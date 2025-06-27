@@ -53,7 +53,7 @@ def titulo_pagina():
         st.markdown(
             """
             <div style="margin-top: 40px;">
-                <a href="https://dados.recife.pe.gov.br/" target="_blank">
+                <a href="http://dados.recife.pe.gov.br/dataset?q=educacao&sort=score+desc%2C+metadata_modified+desc" target="_blank">
                     🛢️ Acessar fonte dos dados
                 </a>
             </div>

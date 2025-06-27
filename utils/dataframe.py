@@ -1,6 +1,6 @@
 import streamlit as st
-from utils.marcadores import divisor, sidebar, texto
-
+from utils.marcadores import divisor
+#from utils.totalizadores import calular_a_quantidade_de_colunas
 
 
 
@@ -56,16 +56,24 @@ def dataframe(df_filtrado):
     """, unsafe_allow_html=True)
 
 
+    col1, col2, col3 = st.columns([3,1,1])
+    with col1:
+        csv = filtro_dados.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
+        st.download_button(
+            label="⬇️ Baixar CSV",
+            data=csv,
+            file_name='unidades_ensino_recife.csv',
+            mime='text/csv',
+            
+        )
+    with col2:
+        totalLinhas = filtro_dados.shape[0]
+        st.metric("📄 Total de Linhas", value=totalLinhas, border=True)
 
-    csv = filtro_dados.to_csv(index=False, encoding='utf-8-sig').encode('utf-8-sig')
-    st.download_button(
-        label="⬇️ Baixar CSV",
-        data=csv,
-        file_name='unidades_ensino_recife.csv',
-        mime='text/csv',
-        
-    )
-
+    with col3:
+        totalColunas = filtro_dados.shape[1]
+        st.metric("📊 Total de Colunas", value=totalColunas, border=True)
+            
 def mainDataframe(df_filtrado):
     divisor()
     dataframe(df_filtrado)

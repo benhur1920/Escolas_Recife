@@ -50,7 +50,9 @@ def calculo_total_Cmei(df):
     totalCmei = (df['Tipo'] == "Cmei").sum()
     return totalCmei
 
-
+def calular_a_quantidade_de_colunas(df):
+    colunasDisponiveis = sorted(df.columns)
+    return len(colunasDisponiveis)  
 
 
 
