@@ -118,7 +118,13 @@ def criacao_navegacao_e_filtros():
         Biblioteca_disponiveis = sorted(df_filtrado['Biblioteca'].dropna().unique())
         filtro_biblioteca = st.multiselect('Selecione se possui biblioteca', Biblioteca_disponiveis, placeholder="Selecione uma opção")
         if filtro_biblioteca:
-            df_filtrado = df_filtrado[df_filtrado['Biblioteca'].isin(filtro_biblioteca)]        
+            df_filtrado = df_filtrado[df_filtrado['Biblioteca'].isin(filtro_biblioteca)]
+
+        # Filtro de quadra
+        Biblioteca_disponiveis = sorted(df_filtrado['Quadra_coberta'].dropna().unique())
+        filtro_biblioteca = st.multiselect('Selecione se possui quadra coberta', Biblioteca_disponiveis, placeholder="Selecione uma opção")
+        if filtro_biblioteca:
+            df_filtrado = df_filtrado[df_filtrado['Quadra_coberta'].isin(filtro_biblioteca)]           
 
     # Conteúdo principal
     if selected == "Sobre":

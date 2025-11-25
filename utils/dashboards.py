@@ -2,7 +2,8 @@ import matplotlib as pl
 import plotly.express as px
 import streamlit as st
 from utils.totalizadores import *
-from utils.graficos import grafico_zona, grafico_bairro, grafico_tipo, grafico_mapa, grafico_climatizacao, grafico_bibliotecas, grafico_sala
+from utils.graficos import (grafico_zona, grafico_bairro, grafico_tipo, grafico_mapa, 
+                            grafico_climatizacao, grafico_bibliotecas, grafico_sala, grafico_quadra)
 from utils.marcadores import divisor
 
 
@@ -22,6 +23,7 @@ def graficos(df_filtrado):
     figura_climatizacao = grafico_climatizacao(df_filtrado)
     figura_sala = grafico_sala(df_filtrado)
     figura_biblioteca = grafico_bibliotecas(df_filtrado)
+    figura_quadra = grafico_quadra(df_filtrado)
 
     # totalizadores
     totalUnidades = calculo_total_unidades(df_filtrado)
@@ -47,14 +49,18 @@ def graficos(df_filtrado):
         with col3:
             st.plotly_chart(fig_tipo, use_container_width=True, config=PLOT_CONFIG)
            
-        col5, col6, col7 = st.columns(3, gap="large") 
+        col5, col6 = st.columns(2, gap="large") 
     
         with col5:
             st.plotly_chart(figura_climatizacao, use_container_width=True, config=PLOT_CONFIG)
         with col6:
             st.plotly_chart(figura_sala, use_container_width=True, config=PLOT_CONFIG)
+
+        col7, col8 = st.columns(2, gap="large" )
         with col7:
-            st.plotly_chart(figura_biblioteca, use_container_width=True, config=PLOT_CONFIG)    
+            st.plotly_chart(figura_biblioteca, use_container_width=True, config=PLOT_CONFIG)  
+        with col8:
+            st.plotly_chart(figura_quadra, use_container_width=True, config=PLOT_CONFIG)  
         
     with aba2:
 

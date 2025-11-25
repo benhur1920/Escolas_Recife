@@ -141,3 +141,17 @@ def grafico_bibliotecas(df):
         yaxis=dict(showgrid=False, zeroline=False, tickfont=dict(color=texto), title_font=dict(color=texto, size=16))
     )
     return fig7
+
+# Gráfico por bibliotecas
+def grafico_quadra(df):
+    
+
+    df_bibliotecas = df.groupby('Quadra_coberta').size().reset_index(name='TOTAL').sort_values('TOTAL', ascending=False)
+    fig7 = px.bar(df_bibliotecas, x='Quadra_coberta', y='TOTAL', labels={'Quadra_coberta': 'Quadra coberta'})
+
+    fig7.update_layout(
+        font=dict(color=texto),
+        xaxis=dict(showgrid=False, zeroline=False, tickfont=dict(color=texto), title_font=dict(color=texto, size=16)),
+        yaxis=dict(showgrid=False, zeroline=False, tickfont=dict(color=texto), title_font=dict(color=texto, size=16))
+    )
+    return fig7
