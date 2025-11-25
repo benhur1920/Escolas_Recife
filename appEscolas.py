@@ -81,18 +81,7 @@ def criacao_navegacao_e_filtros():
             options=["Sobre", "Dashboards", "Dataframe"],
             icons=["info-circle", "bar-chart", "table"],
             default_index=0,
-            styles={
-                "container": {"background-color": sidebar},
-                "nav-link": {
-                    "color": "#fffddf",
-                    "font-size": "18px",
-                    "hover-color": texto,
-                },
-                "nav-link-selected": {
-                    "background-color": "#ddd9dc",
-                    "color": background,
-                },
-            }
+            
         )
 
         
