@@ -1,4 +1,7 @@
 from dados.escolas import df
+print(df.shape)
+print(df.head())
+print(df.columns)
 import pandas as pd
 import streamlit as st
 import re
@@ -35,19 +38,19 @@ def calculo_total_turmas(df):
     return f"{totalTurmas:,.0f}".replace(",", ".")
 
 def calculo_total_escola_municipal(df):
-    totalEscolas = (df['Tipo'] == "Escola Municipal").sum()
+    totalEscolas = (df['Tipo'] == "ESCOLA MUNICIPAL").sum()
     return totalEscolas
 
 def calculo_total_creche_municipal(df):
-    totalCreches = (df['Tipo'] == "Creche Municipal").sum()
+    totalCreches = (df['Tipo'] == "CRECHE MUNICIPAL").sum()
     return totalCreches
 
 def calculo_total_creche_escola_municipal(df):
-    totalCrechesEscolas = (df['Tipo'] == "Creche Esc.Recife").sum()
+    totalCrechesEscolas = (df['Tipo'] == "CRECHE ESC.RECIFE").sum()
     return totalCrechesEscolas
 
 def calculo_total_Cmei(df):
-    totalCmei = (df['Tipo'] == "Cmei").sum()
+    totalCmei = (df['Tipo'] == "CMEI").sum()
     return totalCmei
 
 def calular_a_quantidade_de_colunas(df):

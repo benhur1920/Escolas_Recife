@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 from unidecode import unidecode
 
 
@@ -37,7 +38,9 @@ def usar_title_para_deixar_primeira_letra_como_maiuscula(df):
 
 
 def salvar_o_DataFrame_no_arquivo_CSV_com_codificação_UTF_8_para_subir_para_o_BI(dados):
-    dados.to_csv('ServicosSaude.csv', sep=';',encoding='utf-8-sig', index=False)
+    caminho = os.path.abspath('escolas.csv')
+    dados.to_csv(caminho, sep=';', encoding='utf-8-sig', index=False)
+    print(f'Arquivo salvo em: {caminho}')
 
 
 
@@ -99,7 +102,7 @@ def aplicando_capitalize_no_nome_das_colunas(df):
 
 
 def main():
-    url = 'http://dados.recife.pe.gov.br/dataset/4d3a3b39-9ea9-46ed-bf21-a2670de519c1/resource/7c613836-9edd-4c0f-bc72-495008dd29c3/download/info_escolas_2023_27122023.csv'
+    url = 'https://dados.recife.pe.gov.br/dataset/116f5a09-2a9f-4e20-bc55-6614dc04d0ae/resource/5e7d8579-ac3c-432f-a4b0-cf9cb7281915/download/unidades-de-ensino-municipal-do-recife-2023.csv'
     dados = entrada_de_dados(url)
     dados = converter_latitude_e_longitude_para_string(dados)
     dados = substituir_ponto_por_virgula_longitude_e_latitude(dados)
@@ -109,9 +112,11 @@ def main():
     dados = criar_a_coluna_Regiao(dados)
     dados = aplicando_capitalize_no_nome_das_colunas(dados)
     #dados = salvar_o_DataFrame_no_arquivo_CSV_com_codificação_UTF_8_para_subir_para_o_BI(dados)
+    
+    print(dados.head())
+    print(len(dados))
+    salvar_o_DataFrame_no_arquivo_CSV_com_codificação_UTF_8_para_subir_para_o_BI(dados)
     return dados
-    #salvar_o_DataFrame_no_arquivo_CSV_com_codificação_UTF_8_para_subir_para_o_BI(dados)
-
 
 df = main()
 
